@@ -1,6 +1,6 @@
 {
   "name": "@godrix/mcp-gitlab-utils",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "MCP server for GitLab: pipelines, MRs, review context, and worktrees",
   "type": "module",
   "main": "./dist/main.js",
