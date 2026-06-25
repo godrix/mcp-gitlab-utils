@@ -1,0 +1,68 @@
+{
+  "manifest_version": "0.3",
+  "name": "@godrix/mcp-gitlab-utils",
+  "version": "0.3.1",
+  "description": "MCP for GitLab: MRs, pipelines, repository, local review, prompts and resources for AI agents.",
+  "author": {
+    "name": "Godrix"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "dist/main.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/dist/main.js"],
+      "env": {
+        "GITLAB_TOKEN": "${user_config.gitlab_token}",
+        "GITLAB_BASE_URL": "${user_config.gitlab_base_url}",
+        "GITLAB_PROJECT_ID": "${user_config.gitlab_project_id}",
+        "WORKTREE_DIR": "${user_config.worktree_dir}",
+        "GITLAB_READ_ONLY": "${user_config.gitlab_read_only}"
+      }
+    }
+  },
+  "user_config": {
+    "gitlab_token": {
+      "type": "string",
+      "title": "GitLab token (PAT)",
+      "description": "Personal Access Token: api, read_repository; write scope for approve/comment/play.",
+      "sensitive": true,
+      "required": true
+    },
+    "gitlab_base_url": {
+      "type": "string",
+      "title": "GitLab URL",
+      "description": "Instance URL, e.g. https://gitlab.example.com (without /api/v4).",
+      "required": true
+    },
+    "gitlab_project_id": {
+      "type": "string",
+      "title": "Fallback project (optional)",
+      "description": "ID or group/repo when project_id/repo_path is not passed to tools.",
+      "required": false
+    },
+    "worktree_dir": {
+      "type": "string",
+      "title": "Worktree directory (optional)",
+      "description": "Override; server default is /tmp/referencia_ao_mcp_worktree.",
+      "required": false,
+      "default": "/tmp/referencia_ao_mcp_worktree"
+    },
+    "gitlab_read_only": {
+      "type": "boolean",
+      "title": "Read-only mode",
+      "description": "When true, blocks merge, comments, approve, and pipeline control.",
+      "required": false,
+      "default": false
+    }
+  },
+  "tools_generated": true,
+  "license": "MIT",
+  "privacy_policies": ["https://about.gitlab.com/privacy/"],
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  }
+}
