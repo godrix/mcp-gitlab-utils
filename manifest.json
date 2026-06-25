@@ -1,7 +1,7 @@
 {
   "manifest_version": "0.3",
   "name": "@godrix/mcp-gitlab-utils",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "MCP for GitLab: MRs, pipelines, repository, local review, prompts and resources for AI agents.",
   "author": {
     "name": "Godrix"
@@ -11,7 +11,9 @@
     "entry_point": "dist/main.js",
     "mcp_config": {
       "command": "node",
-      "args": ["${__dirname}/dist/main.js"],
+      "args": [
+        "${__dirname}/dist/main.js"
+      ],
       "env": {
         "GITLAB_TOKEN": "${user_config.gitlab_token}",
         "GITLAB_BASE_URL": "${user_config.gitlab_base_url}",
@@ -58,9 +60,15 @@
   },
   "tools_generated": true,
   "license": "MIT",
-  "privacy_policies": ["https://about.gitlab.com/privacy/"],
+  "privacy_policies": [
+    "https://about.gitlab.com/privacy/"
+  ],
   "compatibility": {
-    "platforms": ["darwin", "win32", "linux"],
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
     "runtimes": {
       "node": ">=18.0.0"
     }
