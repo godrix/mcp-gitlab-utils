@@ -1,6 +1,6 @@
 {
   "manifest_version": "0.3",
-  "name": "@godrix/mcp-gitlab-utils",
+  "name": "@godrix/gitlab-utils-mcp",
   "version": "0.3.3",
   "description": "MCP for GitLab: MRs, pipelines, repository, local review, prompts and resources for AI agents.",
   "author": {

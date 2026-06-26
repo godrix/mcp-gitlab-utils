@@ -11,7 +11,7 @@ import { registerReviewTools } from "./tools/review.js";
 export function createServer(): McpServer {
   const server = new McpServer(
     {
-      name: "@godrix/mcp-gitlab-utils",
+      name: "@godrix/gitlab-utils-mcp",
       version: "0.3.1",
     },
     {

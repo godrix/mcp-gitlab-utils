@@ -4,7 +4,7 @@ import type { Variables } from "@modelcontextprotocol/sdk/shared/uriTemplate.js"
 import { GitLabClient, projectPathSegment, requireGitLabEnv } from "./gitlab-client.js";
 import { SERVER_INSTRUCTIONS } from "./instructions.js";
 
-const AGENT_GUIDE = `# Agent guide — @godrix/mcp-gitlab-utils
+const AGENT_GUIDE = `# Agent guide — @godrix/gitlab-utils-mcp
 
 ${SERVER_INSTRUCTIONS}
 

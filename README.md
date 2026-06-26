@@ -1,6 +1,6 @@
-# @godrix/mcp-gitlab-utils
+# @godrix/gitlab-utils-mcp
 
-[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=gitlab-utils&config=eyJlbnYiOnsiR0lUTEFCX1RPS0VOIjoieW91cl90b2tlbl9oZXJlIiwiR0lUTEFCX0JBU0VfVVJMIjoiaHR0cHM6Ly9naXRsYWIuZXhhbXBsZS5jb20iLCJHSVRMQUJfUkVBRF9PTkxZIjoiZmFsc2UifSwiY29tbWFuZCI6Im5weCAteSBAZ29kcml4L21jcC1naXRsYWItdXRpbHMifQ==)
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=gitlab-utils&config=eyJlbnYiOnsiR0lUTEFCX1RPS0VOIjoieW91cl90b2tlbl9oZXJlIiwiR0lUTEFCX0JBU0VfVVJMIjoiaHR0cHM6Ly9naXRsYWIuZXhhbXBsZS5jb20iLCJHSVRMQUJfUkVBRF9PTkxZIjoiZmFsc2UifSwiY29tbWFuZCI6Im5weCAteSBAZ29kcml4L2dpdGxhYi11dGlscy1tY3AifQ==)
 
 Node.js [MCP](https://modelcontextprotocol.io) server for the GitLab REST API — built for **AI agents** (pipelines, merge requests, diffs, local review, and context discovery).
 
@@ -23,7 +23,7 @@ No clone or local build — the published npm package includes compiled JavaScri
   "mcpServers": {
     "gitlab-utils": {
       "command": "npx",
-      "args": ["-y", "@godrix/mcp-gitlab-utils"],
+      "args": ["-y", "@godrix/gitlab-utils-mcp"],
       "env": {
         "GITLAB_TOKEN": "glpat-...",
         "GITLAB_BASE_URL": "https://gitlab.example.com",
@@ -39,10 +39,10 @@ Restart your MCP client after saving. Optional variables: `GITLAB_PROJECT_ID`, `
 ### Global install (alternative)
 
 ```bash
-npm install -g @godrix/mcp-gitlab-utils
+npm install -g @godrix/gitlab-utils-mcp
 ```
 
-Then use `"command": "mcp-gitlab-utils"` in `mcp.json` (no `npx`).
+Then use `"command": "gitlab-utils-mcp"` in `mcp.json` (no `npx`).
 
 ## Environment variables
 

@@ -7,5 +7,5 @@ import { createServer } from "./server.js";
 
 await createServer().connect(new StdioServerTransport());
 console.error(
-  `@godrix/mcp-gitlab-utils — ${isGitLabReadOnly() ? "Read-only (GITLAB_READ_ONLY=true)" : "Full access"}`,
+  `@godrix/gitlab-utils-mcp — ${isGitLabReadOnly() ? "Read-only (GITLAB_READ_ONLY=true)" : "Full access"}`,
 );
